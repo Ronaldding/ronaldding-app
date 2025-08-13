@@ -11,14 +11,8 @@ interface Message {
 }
 
 export default function ChatbotPage() {
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: "1",
-      text: "Hello! I'm Ronald Ding's AI assistant. How can I help you today?",
-      isUser: false,
-      timestamp: new Date()
-    }
-  ]);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [isInitialized, setIsInitialized] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -30,6 +24,21 @@ export default function ChatbotPage() {
     }
   };
 
+  // Initialize messages on client side to avoid hydration issues
+  useEffect(() => {
+    if (!isInitialized) {
+      setMessages([
+        {
+          id: "welcome-1",
+          text: "Hello! I'm Ronald Ding's AI assistant. How can I help you today?",
+          isUser: false,
+          timestamp: new Date()
+        }
+      ]);
+      setIsInitialized(true);
+    }
+  }, [isInitialized]);
+
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
@@ -40,7 +49,7 @@ export default function ChatbotPage() {
     if (!inputValue.trim() || isLoading) return;
 
     const userMessage: Message = {
-      id: Date.now().toString(),
+      id: `user-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       text: inputValue.trim(),
       isUser: true,
       timestamp: new Date()
@@ -53,7 +62,7 @@ export default function ChatbotPage() {
     try {
       // Prepare conversation history for context
       const conversationHistory = messages
-        .filter(msg => msg.id !== "1") // Exclude initial greeting
+        .filter(msg => msg.id !== "welcome-1") // Exclude initial greeting
         .map(msg => ({
           role: msg.isUser ? "user" : "assistant",
           content: msg.text
@@ -79,7 +88,7 @@ export default function ChatbotPage() {
       
       if (data.success && data.response) {
         const botMessage: Message = {
-          id: (Date.now() + 1).toString(),
+          id: `bot-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
           text: data.response,
           isUser: false,
           timestamp: new Date()
@@ -90,7 +99,7 @@ export default function ChatbotPage() {
       }
     } catch (error) {
       const errorMessage: Message = {
-        id: (Date.now() + 1).toString(),
+        id: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
         text: `Sorry, I encountered an error: ${error instanceof Error ? error.message : "Unknown error"}`,
         isUser: false,
         timestamp: new Date()
@@ -104,7 +113,7 @@ export default function ChatbotPage() {
   const clearChat = () => {
     setMessages([
       {
-        id: "1",
+        id: "welcome-1",
         text: "Hello! I'm Ronald Ding's AI assistant. How can I help you today?",
         isUser: false,
         timestamp: new Date()
