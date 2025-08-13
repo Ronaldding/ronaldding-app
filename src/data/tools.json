@@ -8,15 +8,7 @@
     "category": "utility",
     "description": "Professional QR code generator with customizable options for size, color, and error correction"
   },
-  {
-    "id": "ai-summarizer",
-    "to": "/ai-summarizer",
-    "title": "AI Text Summarizer",
-    "subtitle": "Get instant AI-powered summaries of any text using Cloudflare AI.",
-    "iconEmoji": "🤖",
-    "category": "ai",
-    "description": "AI-powered text summarization tool that extracts key points and main ideas"
-  },
+
   {
     "id": "cheque-converter",
     "to": "/cheque-converter",
