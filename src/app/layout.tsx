@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Roboto, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import "@uiw/react-md-editor/markdown-editor.css";
@@ -29,6 +29,9 @@ export const metadata: Metadata = {
       { rel: "mask-icon", url: "/icon.svg", color: "#111111" },
     ],
   },
+};
+
+export const viewport: Viewport = {
   themeColor: "#ffffff",
 };
 
