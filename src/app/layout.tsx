@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Roboto, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import "@uiw/react-md-editor/markdown-editor.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -39,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
+        className={`${roboto.variable} ${jetbrainsMono.variable} antialiased`}
       >
         {children}
       </body>

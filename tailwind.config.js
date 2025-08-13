@@ -8,8 +8,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'sans-serif'],
+        sans: ['var(--font-roboto)', 'sans-serif'],
         mono: ['var(--font-jetbrains-mono)', 'monospace'],
+        'reading': ['var(--font-roboto)', 'sans-serif'],
+        'body': ['var(--font-roboto)', 'sans-serif'],
       },
       colors: {
         background: 'var(--background)',

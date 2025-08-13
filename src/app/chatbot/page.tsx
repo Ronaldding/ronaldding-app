@@ -129,10 +129,10 @@ export default function ChatbotPage() {
         <div className="max-w-4xl mx-auto px-6 sm:px-8 py-12">
           {/* Hero Section */}
           <div className="text-center mb-8">
-            <h1 className="text-5xl font-bold tracking-tight text-gray-900 mb-4">
+            <h1 className="text-5xl font-medium tracking-tight text-gray-900 mb-4 font-reading">
               AI Chatbot
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-body text-readable">
               Your intelligent AI assistant powered by Cloudflare AI. Ask me anything!
             </p>
           </div>
@@ -176,7 +176,7 @@ export default function ChatbotPage() {
                         : "bg-gray-100 text-gray-800 rounded-bl-md"
                     }`}
                   >
-                    <p className="text-sm leading-relaxed">{message.text}</p>
+                    <p className="text-sm leading-relaxed font-body">{message.text}</p>
                     <p className={`text-xs mt-2 ${
                       message.isUser ? "text-blue-100" : "text-gray-500"
                     }`}>
