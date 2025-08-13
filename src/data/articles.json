@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "to": "/article/id/1",
+    "title": "太宰治《人間失格》導讀：文本結構、主題母題與時代脈絡",
+    "subtitle": "《人間失格》由旁觀者的「序章」與主角大庭葉藏的三份「手記」組成，像是一場持續的自白與剝離。",
+    "iconEmoji": "📚",
+    "section": "藝文｜評論專題",
+    "readMinutes": 6,
+    "publishedAt": "2025-08-10 22:12",
+    "category": "literature",
+    "description": "深度導讀太宰治《人間失格》，分析文本結構、主題母題與時代脈絡"
+  },
+  {
+    "id": 2,
+    "to": "/article/id/2",
+    "title": "《誰搬走了我的乳酪》快速導讀：面對變化的四個步驟",
+    "subtitle": "本書以寓言闡述如何應對環境變化：觀察、快速行動、享受新乳酪、持續更新。",
+    "iconEmoji": "🧀",
+    "section": "書摘｜效率與成長",
+    "readMinutes": 4,
+    "publishedAt": "2025-08-10 22:20",
+    "category": "self-help",
+    "description": "快速導讀《誰搬走了我的乳酪》，學習應對變化的四個關鍵步驟"
+  },
+  {
+    "id": 3,
+    "to": "/article/id/3",
+    "title": "《我們住在焦慮星球》閱讀紀錄",
+    "subtitle": "當焦慮成為這個時代的集體情緒，《我們住在焦慮星球》像一面溫柔的鏡子，照見每個在焦慮中浮沉的靈魂。",
+    "iconEmoji": "🌍",
+    "section": "書評｜閱讀紀錄",
+    "readMinutes": 7,
+    "publishedAt": "2025-08-11 00:00",
+    "category": "philosophy",
+    "description": "閱讀紀錄《我們住在焦慮星球》，在焦慮時代尋找內心平靜的溫柔哲學"
+  }
+] 

@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ronaldding-app-chatbot",
+  "main": "./src/worker/index.ts",
+  "compatibility_date": "2025-01-27",
+  "compatibility_flags": ["nodejs_compat"],
+  "ai": {
+    "binding": "AI"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "upload_source_maps": true
+} 

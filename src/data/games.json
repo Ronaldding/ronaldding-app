@@ -1,0 +1,20 @@
+[
+  {
+    "id": "racing-game",
+    "to": "/racing-game",
+    "title": "3D Racing Game",
+    "subtitle": "Race in a sleek 3D environment with realistic physics and multiple tracks.",
+    "iconEmoji": "🏎️",
+    "category": "action",
+    "description": "Immersive 3D racing experience with advanced physics engine, customizable cars, and competitive multiplayer modes."
+  },
+  {
+    "id": "bill-gates-money",
+    "to": "/bill-gates-money",
+    "title": "Spend Bill Gates' Money",
+    "subtitle": "Simulate spending with Bill Gates' net worth.",
+    "iconEmoji": "💵",
+    "category": "simulation",
+    "description": "Fun simulation game where you manage and spend a fortune equal to Bill Gates' net worth"
+  }
+] 

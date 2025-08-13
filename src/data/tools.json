@@ -1,0 +1,56 @@
+[
+  {
+    "id": "qr-code",
+    "to": "/qr-code",
+    "title": "QR Code Generator",
+    "subtitle": "Create clean, scannable codes for any URL or text.",
+    "iconEmoji": "📱",
+    "category": "utility",
+    "description": "Professional QR code generator with customizable options for size, color, and error correction"
+  },
+  {
+    "id": "ai-summarizer",
+    "to": "/ai-summarizer",
+    "title": "AI Text Summarizer",
+    "subtitle": "Get instant AI-powered summaries of any text using Cloudflare AI.",
+    "iconEmoji": "🤖",
+    "category": "ai",
+    "description": "AI-powered text summarization tool that extracts key points and main ideas"
+  },
+  {
+    "id": "cheque-converter",
+    "to": "/cheque-converter",
+    "title": "Cheque Writer 支票寫紙轉換",
+    "subtitle": "Convert numbers to traditional Chinese and English cheque formats.",
+    "iconEmoji": "💰",
+    "category": "finance",
+    "description": "Accurately converts numerical values to legal cheque formats in both traditional Chinese and English"
+  },
+  {
+    "id": "kinship",
+    "to": "/kinship",
+    "title": "Kinship Calculator 親戚稱呼計算",
+    "subtitle": "Work out family terms by paths like「f.ob.s」.",
+    "iconEmoji": "👨‍👩‍👧‍👦",
+    "category": "utility",
+    "description": "Calculate Chinese kinship terms and relationships through intuitive path notation"
+  },
+  {
+    "id": "bill-gates-money",
+    "to": "/bill-gates-money",
+    "title": "Spend Bill Gates' Money",
+    "subtitle": "Simulate spending with Bill Gates' net worth.",
+    "iconEmoji": "💵",
+    "category": "simulation",
+    "description": "Fun simulation game where you manage and spend a fortune equal to Bill Gates' net worth"
+  },
+  {
+    "id": "chatbot",
+    "to": "/chatbot",
+    "title": "Chatbot",
+    "subtitle": "Intelligent AI assistant for help and support.",
+    "iconEmoji": "💬",
+    "category": "ai",
+    "description": "AI-powered chatbot assistant that helps with various tasks and answers questions"
+  }
+] 
