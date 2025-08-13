@@ -236,7 +236,7 @@ function QRCodePage() {
     bgColor: '#FFFFFF',
     logo: null,
   });
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const qrRef = useRef<HTMLDivElement>(null);
   
   // Custom dropdown state
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -273,12 +273,15 @@ function QRCodePage() {
   };
 
   const downloadQRCode = () => {
-    if (canvasRef.current) {
-      canvasRef.current.toBlob((blob: Blob | null) => {
-        if (blob) {
-          saveAs(blob, 'my-qr-code.png');
-        }
-      });
+    if (qrRef.current) {
+      const canvas = qrRef.current.querySelector('canvas');
+      if (canvas) {
+        canvas.toBlob((blob: Blob | null) => {
+          if (blob) {
+            saveAs(blob, 'my-qr-code.png');
+          }
+        });
+      }
     }
   };
 
@@ -461,8 +464,8 @@ function QRCodePage() {
 
             <div>
               <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center">
-                <div className="inline-block p-4 rounded-xl border border-gray-200 bg-white">
-                  <QRCodeCanvas ref={canvasRef} value={content} size={qrConfig.size} fgColor={qrConfig.fgColor} bgColor={qrConfig.bgColor} level="H" />
+                <div ref={qrRef} className="inline-block p-4 rounded-xl border border-gray-200 bg-white">
+                  <QRCodeCanvas value={content} size={qrConfig.size} fgColor={qrConfig.fgColor} bgColor={qrConfig.bgColor} level="H" />
                 </div>
                 <button onClick={downloadQRCode} className="mt-6 inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-5 py-3 text-sm font-medium shadow-sm hover:shadow transition-all focus-visible:ring-2 focus-visible:ring-black/30">
                   Download PNG

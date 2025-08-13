@@ -60,7 +60,7 @@ export default function ChatbotPage() {
         }));
 
       // Use Cloudflare Worker instead of local API
-      const response = await fetch("https://ronaldding-app-chatbot.your-subdomain.workers.dev", {
+      const response = await fetch("https://ronaldding-app-chatbot.ronaldding2002.workers.dev", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
